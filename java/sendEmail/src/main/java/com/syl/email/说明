@@ -1,0 +1,8 @@
+简单的java mail
+利用<dependency>
+     <groupId>com.sun.mail</groupId>
+     <artifactId>javax.mail</artifactId>
+     <version>1.5.5</version>
+  </dependency>
+编写
+缺点：编写太过于麻烦

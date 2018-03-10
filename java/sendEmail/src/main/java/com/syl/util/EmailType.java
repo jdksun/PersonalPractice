@@ -2,7 +2,10 @@ package com.syl.util;
 
 public enum EmailType {
 
-    文本("0","text/html;charset=UTF-8")
+    文本("0","text/html;charset=UTF-8"),
+    图片("1","text/html;charset=UTF-8"),
+    HTML("2","text/html;charset=UTF-8"),
+    内嵌文件("3","text/html;charset=UTF-8")
     ;
     private String code;
     private String msg;
