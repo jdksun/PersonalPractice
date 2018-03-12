@@ -15,6 +15,7 @@
         <module>sendEmail</module>
         <module>test</module>
         <module>swordOffer</module>
+        <module>webServer</module>
     </modules>
 
     <dependencies>
