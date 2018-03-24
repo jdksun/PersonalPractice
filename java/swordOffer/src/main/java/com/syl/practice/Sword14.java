@@ -1,9 +1,14 @@
 package com.syl.practice;
 
-public class Sword14 {
+import com.syl.tools.ListNode;
 
-	public static void main(String[] args) {
-		
+/**
+ * 题目：两个的第一个公共结点
+ * 输入两个链表，找出它们的第一个公共结点。
+ */
+public class Sword14 {
+	public ListNode FindFirstCommonNode(ListNode pHead1, ListNode pHead2) {
+		return null;
 	}
 	
 	

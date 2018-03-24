@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>Chapter1</module>
+        <module>Chapter2</module>
     </modules>
     <artifactId>springInAction</artifactId>
 

@@ -16,6 +16,7 @@
         <module>test</module>
         <module>swordOffer</module>
         <module>webServer</module>
+        <module>thread</module>
     </modules>
 
     <dependencies>
