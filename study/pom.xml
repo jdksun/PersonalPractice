@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>springInAction</module>
+        <module>teacher_xq</module>
     </modules>
 
     <dependencies>

@@ -25,9 +25,6 @@ import java.util.Stack;
  */
 public class Sword3 {
 
-	public static void main(String[] args) {
-		
-	}
 
 	/**
 	 * 我的答案
