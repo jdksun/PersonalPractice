@@ -17,6 +17,7 @@
         <module>swordOffer</module>
         <module>webServer</module>
         <module>thread</module>
+        <module>aa</module>
     </modules>
 
     <dependencies>

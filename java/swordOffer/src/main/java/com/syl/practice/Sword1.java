@@ -40,7 +40,8 @@ public class Sword1 {
 		int deep = 0;
 		while(!queue.isEmpty()) {
 			deep++;
-			for(int i = 0;i<queue.size();i++) {
+			int len = queue.size();
+			while (len-- > 0){
 				TreeNode next = queue.poll();
 				if (next.left != null) {
 					queue.add(next.left);
@@ -55,6 +56,8 @@ public class Sword1 {
 
 	/**
 	 * 栈的形式
+	 * 不推荐使用这种形式 for(int i = 0;i < stack.size(); i++)
+	 * 因为stack.size()在每次for循环中是会改变的，造成利用此方法计算其他类似算法的时候，造成差错
 	 * @param root
 	 * @return
 	 */
@@ -78,5 +81,30 @@ public class Sword1 {
 		return deep;
 	}
 
+	/**
+	 * 层次遍历 减少循环
+	 * @param root
+	 * @return
+	 */
+	public int TreeDepath3(TreeNode root) {
+		if (root == null) return 0;
+		Queue<TreeNode> queue = new LinkedList<>();
+		queue.add(root);
+		int deep = 0;
+		int count = 0;
+		int nextCount = 1;
+		while (!queue.isEmpty()){
+			TreeNode t = queue.poll();
+			count++;
+			if (t.left != null) queue.add(t.left);
+			if (t.right != null) queue.add(t.right);
+			if (count == nextCount){
+				count = 0;
+				nextCount = queue.size();
+				deep++;
+			}
+		}
+		return deep;
+	}
 
 }
