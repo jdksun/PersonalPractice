@@ -1,4 +1,4 @@
-package com.syl.test.array;
+package com.syl.test.collection.array;
 
 public class MyArray {
     private int[] data;

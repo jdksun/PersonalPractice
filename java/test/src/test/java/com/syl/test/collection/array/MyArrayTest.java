@@ -1,8 +1,6 @@
-package com.syl.test.array;
+package com.syl.test.collection.array;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class MyArrayTest {
     @Test
