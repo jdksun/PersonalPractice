@@ -15,6 +15,7 @@
         <module>springInAction</module>
         <module>teacher_xq</module>
         <module>redis</module>
+        <module>network</module>
     </modules>
 
     <dependencies>
