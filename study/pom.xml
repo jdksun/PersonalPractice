@@ -16,6 +16,7 @@
         <module>teacher_xq</module>
         <module>redis</module>
         <module>network</module>
+        <module>aop</module>
     </modules>
 
     <dependencies>
