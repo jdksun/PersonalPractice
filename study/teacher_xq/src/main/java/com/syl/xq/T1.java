@@ -13,9 +13,6 @@ public class T1 {
 
 		T1 h = new T1();
 		h.start();
-		
-		
-		
 	}
 	public void start(){
 		int[] a = read();

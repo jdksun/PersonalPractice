@@ -4,15 +4,19 @@ import javax.swing.JPanel;
 import javax.swing.JFrame;
 import java.awt.Graphics;
 import java.awt.Color;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.List;
 public class Rain extends JFrame{
     public Rain(){
-        setSize(600,600);
+        setSize(1000,1000);
         setVisible(true);
         setBackground(Color.BLACK);
-        View rain = new View();
+        View rain = new View(1000);
         add(rain);
         new Thread(rain).start();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -32,7 +36,7 @@ class View extends JPanel implements Runnable{
      */
     private List<BaseView> list = new ArrayList<>();
     View(){
-        setSize(600,600);
+        setSize(1000,1000);
         setVisible(true);
         init();
         setBackground(Color.BLACK);
@@ -47,7 +51,20 @@ class View extends JPanel implements Runnable{
      */
     private void init() {
         for (int i = 0; i < number; i++) {
-            list.add(new RainItem(this.getWidth(),this.getHeight()));
+            final RainItem rainItem = new RainItem(this.getWidth(),this.getHeight());
+            BaseView prox = (BaseView)Proxy.newProxyInstance(RainItem.class.getClassLoader(),
+                    rainItem.getClass().getInterfaces(),
+                    new InvocationHandler() {
+                        @Override
+                        public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                            if (method.getName().equals("move")){
+                                return method.invoke(rainItem,args);
+                            }
+                            System.out.printf("名称%s，参数%s\n",method.getName(), Arrays.toString(args));
+                            return method.invoke(rainItem,args);
+                        }
+                    });
+            list.add(prox);
         }
     }
 
