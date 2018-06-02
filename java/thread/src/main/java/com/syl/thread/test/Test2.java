@@ -1,4 +1,4 @@
-package com.syl.thread;
+package com.syl.thread.test;
 
 import java.util.Vector;
 

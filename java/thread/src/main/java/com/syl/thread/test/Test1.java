@@ -1,4 +1,4 @@
-package com.syl.thread;
+package com.syl.thread.test;
 
 /**
  * 可重入

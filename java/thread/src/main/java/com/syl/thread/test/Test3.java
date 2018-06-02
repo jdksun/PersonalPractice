@@ -1,4 +1,4 @@
-package com.syl.thread;
+package com.syl.thread.test;
 
 public class Test3 {
     private static boolean ready;

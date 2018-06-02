@@ -1,5 +1,9 @@
 package com.syl.thread.test;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Test4 {
     public static void main(String[] args) {
         Park p=new Park();
@@ -13,6 +17,7 @@ public class Test4 {
         new Thread (new ParkCar(d,p)).start();
         new Thread (new ParkCar(e,p)).start();
         new Thread (new ParkCar(b,p)).start();
+
     }
 
 }
@@ -125,7 +130,7 @@ class ParkCar implements Runnable
                 }
                 try
                 {
-                    Thread.sleep(100);
+                    Thread.sleep(1000*5);
                 }
                 catch(InterruptedException ie)
                 {
