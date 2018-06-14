@@ -17,6 +17,8 @@
         <module>swordOffer</module>
         <module>webServer</module>
         <module>thread</module>
+        <module>../java、sort</module>
+        <module>sort</module>
 
     </modules>
 

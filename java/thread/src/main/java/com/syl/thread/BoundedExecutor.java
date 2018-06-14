@@ -1,5 +1,6 @@
 package com.syl.thread;
 
+import java.util.Random;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.RejectedExecutionException;
@@ -17,7 +18,7 @@ public class BoundedExecutor {
                     public void run() {
                         System.out.println(finalI +"");
                         try {
-                            Thread.sleep(1000);
+                            Thread.sleep(new Random().nextInt(1000*10));
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -36,7 +37,8 @@ public class BoundedExecutor {
         this.exec = exec;
         this.semaphore = new Semaphore(num);
     }
-
+    public void stop(){
+    }
     public void submitTask(final Runnable r) throws InterruptedException {
         semaphore.acquire();
         try {
