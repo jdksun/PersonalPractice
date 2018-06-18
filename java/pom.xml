@@ -19,6 +19,7 @@
         <module>thread</module>
         <module>../java、sort</module>
         <module>sort</module>
+        <module>design</module>
 
     </modules>
 
