@@ -12,7 +12,6 @@
     <artifactId>study</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>springInAction</module>
         <module>teacher_xq</module>
         <module>redis</module>
         <module>network</module>
