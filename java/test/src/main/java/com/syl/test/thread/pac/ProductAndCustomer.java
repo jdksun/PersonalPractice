@@ -1,4 +1,4 @@
-package com.syl.test.thread;
+package com.syl.test.thread.pac;
 
 /**
  * 单一的消费者和生产者
