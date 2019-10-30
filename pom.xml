@@ -12,8 +12,6 @@
 
         <module>web</module>
         <module>java</module>
-        <module>webpage</module>
-        <module>study</module>
     </modules>
     <dependencyManagement>
         <dependencies>
