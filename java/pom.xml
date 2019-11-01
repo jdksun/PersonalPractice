@@ -20,6 +20,7 @@
         <module>sort</module>
         <module>design</module>
         <module>leetcode</module>
+        <module>ssm</module>
 
     </modules>
 
